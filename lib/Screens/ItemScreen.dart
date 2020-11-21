@@ -38,14 +38,12 @@ class _ItemScreenState extends State<ItemScreen> {
           )
         ],
       ),
-      body: ListView(
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           Image.asset(
             widget.item.image,
             height: 200,
-          ),
-          SizedBox(
-            height: 10,
           ),
           Text(
             widget.item.name,
@@ -54,9 +52,6 @@ class _ItemScreenState extends State<ItemScreen> {
               fontWeight: FontWeight.bold,
               fontSize: 30,
             ),
-          ),
-          SizedBox(
-            height: 20,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -71,9 +66,6 @@ class _ItemScreenState extends State<ItemScreen> {
               ),
             ],
           ),
-          SizedBox(
-            height: 10,
-          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
@@ -87,21 +79,15 @@ class _ItemScreenState extends State<ItemScreen> {
               ),
             ],
           ),
-          SizedBox(
-            height: 20,
-          ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Text(
               widget.item.description,
               style: TextStyle(
-                fontSize: 17,
+                fontSize: 20,
                 color: Colors.black54,
               ),
             ),
-          ),
-          SizedBox(
-            height: 20,
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -140,9 +126,6 @@ class _ItemScreenState extends State<ItemScreen> {
                 )
               ],
             ),
-          ),
-          SizedBox(
-            height: 20,
           ),
         ],
       ),
